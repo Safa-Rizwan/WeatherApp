@@ -27,5 +27,40 @@
             <h3 class="tempmin_max">Min 26.49°C | Max 26.49°C</h3>
         </div>
     </div>
+    <script>
+        const curDate=document.getElementById("date");
+        let weathercon=document.getElementById("weathercon");
+        const tempStatus= "clouds";
+
+        const getCurrentDay = ()=>{
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            let currentTime = new Date();
+            let result =days[currentTime.getDay()];
+            return result
+        };
+        // getCurrentDay()
+        const getCurrentTime=()=>{
+            var months=["January","Feburary","March","April","May","June","July","August","September","October","November","December"]
+            var now = new Date();
+            var month= now.getMonth();
+            var date = now.getDate();
+            let hours=now.getHours();
+            let min = now.getMinutes();
+            let period = "AM"
+            if (hours>11){
+                period="PM"
+                if (hours>12){
+                    hours-=12;
+                }
+            }
+            if (min<10){
+                min = "0"+min;
+            }
+            
+            // console.log(months[month] +'/'+day)
+            return `${months[month]} ${date} | ${hours}:${min}${period}`
+        }
+        curDate.innerHTML= getCurrentDay()+" | "+getCurrentTime();
+    </script>
 </body>
 </html>

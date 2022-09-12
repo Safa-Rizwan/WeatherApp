@@ -1,0 +1,19 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "full web development project with backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Safa-Rizwan/WeatherApp.git"
+  },
+  "author": "safarizwan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Safa-Rizwan/WeatherApp/issues"
+  },
+  "homepage": "https://github.com/Safa-Rizwan/WeatherApp#readme"
+}
