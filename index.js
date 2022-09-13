@@ -19,12 +19,9 @@ const server = http.createServer((req,res)=>{
 .on('data', (chunk)=> {
     const objData = JSON.parse(chunk);
     const arrayData = [objData];
-    const realTimeData= arrayData.map((val)=>{
-     const result=replaceVal(homeFile,val)
-     res.write(result);
-    });
-    
-    console.log(realTimeData);
+    const realTimeData= arrayData.map((val)=>replaceVal(homeFile,val)).join("");
+    // console.log(realTimeData);
+    res.write(realTimeData);
 
 //   console.log(arrayData[0].main.temp);
 })
@@ -36,5 +33,5 @@ const server = http.createServer((req,res)=>{
 });
     }
 })
-server.listen(80,"127.0.0.1")
+server.listen(80,"127.0.0.1");
 // https://api.openweathermap.org/data/2.5/weather?q=Karachi&appid=faf86ec4d32f3ee268303a77ff870027
