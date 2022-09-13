@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Safa-Rizwan/WeatherApp/issues"
   },
-  "homepage": "https://github.com/Safa-Rizwan/WeatherApp#readme"
+  "homepage": "https://github.com/Safa-Rizwan/WeatherApp#readme",
+  "dependencies": {
+    "requests": "^0.3.0"
+  }
 }
